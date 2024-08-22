@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!-- bean definitions here -->
+    
+    <!-- property - Dependency injection by setter -->
+    <bean id="empbean" class="com.sam.myMavenPrj1.model.Employee">
+    	<property name="id" value="101"></property>
+    	<property name="name" value="Rohan"></property>
+    </bean>
+    
+    <bean id="emp2" class="com.sam.myMavenPrj1.model.Employee">
+    	<property name="id" value="102"></property>
+    	<property name="name" value="Archana"></property>
+    </bean>
+    
+    <bean id="address1" class="com.sam.myMavenPrj1.model.Address">
+    	<constructor-arg value="Benglore"/>
+    	<constructor-arg value="KA"/>
+    	<constructor-arg value="India"/>
+    </bean>
+    
+    <bean id="s1" class="com.sam.myMavenPrj1.model.Skill">
+    	<constructor-arg value="21" type="int"/>
+    	<constructor-arg value="java"/>
+    </bean>
+    
+    <bean id="s2" class="com.sam.myMavenPrj1.model.Skill">
+    	<constructor-arg value="22" type="int"/>
+    	<constructor-arg value="Angular"/>
+    </bean>
+
+<!-- constructor based dependency injection -->
+	<bean id="emp3" class="com.sam.myMavenPrj1.model.Employee">
+    	<constructor-arg value="103" type="int"/>
+    	<constructor-arg value="divya"/>
+    	<constructor-arg>
+    		<ref bean= "address1"/>
+    	</constructor-arg>
+    	<constructor-arg>
+    		<list>
+    		<ref bean= "s1"/>
+    		<ref bean= "s2"/>
+    		</list>
+    	</constructor-arg>
+    </bean>	
+
+</beans>
