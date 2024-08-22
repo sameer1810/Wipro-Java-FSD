@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="address1" class="com.sam.task_06aug.model.Address">
+        <property name="area" value="Area 1"/>
+        <property name="city" value="City 1"/>
+        <property name="country" value="Country 1"/>
+    </bean>
+    <bean id="address2" class="com.sam.task_06aug.model.Address">
+        <property name="area" value="Area 2"/>
+        <property name="city" value="City 2"/>
+        <property name="country" value="Country 2"/>
+    </bean>
+    <bean id="address3" class="com.sam.task_06aug.model.Address">
+        <property name="area" value="Area 3"/>
+        <property name="city" value="City 3"/>
+        <property name="country" value="Country 3"/>
+    </bean>
+
+    <bean id="book1" class="com.sam.task_06aug.model.Book">
+        <property name="bookId" value="101"/>
+        <property name="title" value="Book Title 1"/>
+        <property name="genre" value="Genre 1"/>
+        <property name="language" value="Language 1"/>
+        <property name="authors">
+            <list>
+                <bean class="com.sam.task_06aug.model.Author">
+                    <property name="authorId" value="1"/>
+                    <property name="authorName" value="Author 1"/>
+                    <property name="address" ref="address1"/>
+                </bean>
+                <bean class="com.sam.task_06aug.model.Author">
+                    <property name="authorId" value="2"/>
+                    <property name="authorName" value="Author 2"/>
+                    <property name="address" ref="address2"/>
+                </bean>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="book2" class="com.sam.task_06aug.model.Book">
+        <constructor-arg value="102"/>
+        <constructor-arg value="Book Title 2"/>
+        <constructor-arg value="Genre 2"/>
+        <constructor-arg value="Language 2"/>
+        <constructor-arg>
+            <list>
+                <bean class="com.sam.task_06aug.model.Author">
+                    <property name="authorId" value="2"/>
+                    <property name="authorName" value="Author 2"/>
+                    <property name="address" ref="address2"/>
+                </bean>
+                <bean class="com.sam.task_06aug.model.Author">
+                    <property name="authorId" value="3"/>
+                    <property name="authorName" value="Author 3"/>
+                    <property name="address" ref="address3"/>
+                </bean>
+            </list>
+        </constructor-arg>
+    </bean>
+    
+    <bean id="book3" class="com.sam.task_06aug.model.Book">
+        <constructor-arg value="103"/>
+        <constructor-arg value="Book Title 3"/>
+        <constructor-arg value="Genre 3"/>
+        <constructor-arg value="Language 3"/>
+        <constructor-arg>
+            <list>
+                <bean class="com.sam.task_06aug.model.Author">
+                    <property name="authorId" value="1"/>
+                    <property name="authorName" value="Author 1"/>
+                    <property name="address" ref="address1"/>
+                </bean>
+                <bean class="com.sam.task_06aug.model.Author">
+                    <property name="authorId" value="3"/>
+                    <property name="authorName" value="Author 3"/>
+                    <property name="address" ref="address3"/>
+                </bean>
+            </list>
+        </constructor-arg>
+    </bean>
+    
+</beans>
