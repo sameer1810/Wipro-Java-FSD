@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <body bgcolor="lightgreen">
+        <form>
+            <h3 align="center">Login form</h3>
+            <hr>
+            <label>User id : </label>
+            <input type="text">
+            <br><br>
+            <label>Password : </label>
+            <input type="password">
+            <br><br>
+            <label>Gender : </label><br>
+            <input type="radio" name="gender">Male<br>
+            <input type="radio" name="gender">Female<br>
+            <input type="radio" name="gender">Other<br>
+            <input type="submit" value="Submit">
+
+            <p id="demo"></p>
+            <input type="button" onclick="countGender()" value="number of gender optons">
+            
+            
+        </form>
+    
+        
+        
+   <script>
+    function countGender(){
+        let x= document.getElementsByName("gender");
+
+        document.getElementById("demo")
+        .innerHTML=x.length;
+    }
+   </script>
+</body>
+</html>

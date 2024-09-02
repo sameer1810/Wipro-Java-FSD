@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Event</title>
+    
+</head>
+<body>
+    <h1>HTML Events using javascript</h1>
+    <h3>onmouseover and onmouseout</h3>
+
+    <img onmouseover="zoomIn(this)"
+        onmouseout="zoomOut(this)" 
+        border="0" height="32"
+        src="pexels-photo-574324.webp" alt="India gate">
+
+    <hr>
+
+    <p id="app">Created para</p>
+    
+    <script>
+        function zoomIn(x){
+            x.style.height="64px";
+            x.style.width ="64px";
+        }
+        function zoomOut(x){
+            x.style.height="32px";
+            x.style.width ="32px";
+        }
+
+        const newPara = document.createElement('p');
+        newPara.innerText="Newly created paragraph tag using Javascript";
+        app.appendChild(newPara);
+    </script>
+</body>
+</html>

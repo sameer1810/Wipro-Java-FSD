@@ -1,0 +1,5 @@
+Promise-
+    -producing code
+    - consuming code
+
+Promise Class of js
