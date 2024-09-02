@@ -1,0 +1,96 @@
+/* this is css
+style comment */
+
+/* universal selector * */
+* {
+    margin: 15;
+    padding: 15;
+}
+/* element selector */
+body {
+    background-color: azure;
+}
+/* grouping selectors */
+h1,h3 {
+    font-size: large;
+    color: rgb(136, 22, 45);
+    text-align: center;
+}
+/* id selector */
+#mydiv {
+    color: rgb(152, 92, 247);
+}
+/* descendent selector */
+#mydiv em{
+    color: lightseagreen;
+}
+#reactprg {
+    color: chocolate;
+}
+
+/* class selector */
+.sec {
+    color: crimson;
+}
+/* descendent selector */
+d1.menu dt {
+    text-decoration: solid;
+    color: hs1(252, 38%, 75%);
+}
+d1.menu dl {
+    text-decoration: solid;
+    color: #e48585;
+}
+tr:nth-child(even) {
+    background-color: aquamarine;
+}
+
+table {
+    background-color: rgb(134, 88, 88);
+    width: 80%;
+}
+tr:hover {
+    background-color: bisque;
+}
+th {
+    padding: 6px;
+    text-align: left;
+    border-block: 1px solid rgb(3, 16, 29);
+    background-color: rgb(150, 140, 200);
+}
+
+h2::after {
+    content: '\01E3';
+}
+
+input[type-checkbox] {
+    accent-color: red;
+}
+input[type-radio] {
+    accent-color: rgb(0, 21, 255);
+}
+
+div {
+    display: flexbox;
+    align-items: center;
+    border: 1px solid black;
+}
+
+#divani {
+    background-color: azure;
+    width: 50%;
+    height: 300px;
+}
+
+#divani div{
+    width: 500px;
+    height: 100px;
+    background-color: blue;
+    position: relative;
+    animation: mymove 5s infinite;
+}
+
+#keyframes mymove {
+    from {left: 0px;}
+    to {left: 200px}
+}

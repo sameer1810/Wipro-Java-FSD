@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Canvas</title>
+        <link rel="stylesheet" href="./CSS/mystyle.css"/>
+    </head>
+    <body>
+        <canvas id="canvas1" width="400" height="300" style="border:2px solid royalblue;">
+            My Canvas
+        </canvas>
+        <a href="geoloc.html">Html 5 features - geolocation API</a>
+    </body>
+    <script>
+        var c = document.getElementById("Canvas");
+        var ctx = c.getContext("2d");
+        ctx.beginPath();
+        ctx.arc(95,50,40,0,7);
+        ctx.stroke();
+    </script>
+</html>
